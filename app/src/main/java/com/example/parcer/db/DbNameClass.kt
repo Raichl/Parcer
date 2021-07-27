@@ -1,0 +1,54 @@
+package com.example.parcer.db
+
+import android.provider.BaseColumns
+
+object DbNameClass {
+    const val DATABASE_VERSION = 1
+    const val DATABASE_NAME = "DNDhelperData.db"
+
+    const val TABLE_NAME_MAGICK = "DndMagickData"
+    const val COLUMN_NAME_MAGICK_NAME = "Name"
+    const val COLUMN_NAME_MAGICK_SPELLLVL = "Lvl"
+    const val COLUMN_NAME_MAGICK_RANGE = "Range"
+    const val COLUMN_NAME_MAGICK_SCHOOL = "School"
+    const val COLUMN_NAME_MAGICK_TIME = "Time"
+    const val COLUMN_NAME_MAGICK_COMPONENT = "Component"
+    const val COLUMN_NAME_MAGICK_DURATION = "Duration"
+    const val COLUMN_NAME_MAGICK_PERSCLASSES = "PersClasses"
+    const val COLUMN_NAME_MAGICK_SOORCE = "Source"
+    const val COLUMN_NAME_MAGICK_DESCRIPTION = "Description"
+
+    const val TABLE_NAME_MONSTER = "DndMonsterData"
+    const val COLUMN_NAME_MONSTER_NAME = "Name"
+    const val COLUMN_NAME_MONSTER_SIZE = "size"
+    const val COLUMN_NAME_MONSTER_TYPE = "type"
+    const val COLUMN_NAME_MONSTER_HITS = "hits"
+    const val COLUMN_NAME_MONSTER_KD = "kd"
+    const val COLUMN_NAME_MONSTER_SPEED = "speed"
+    const val COLUMN_NAME_MONSTER_STATS = "stats"
+    const val COLUMN_NAME_MONSTER_SKILLS = "skills"
+    const val COLUMN_NAME_MONSTER_ACTIONANDDESCRIPTION = "actionAndDescription"
+
+
+    const val CREATE_TABLE_MONSTER = "CREATE TABLE IF NOT EXISTS $TABLE_NAME_MONSTER (" +
+            "${BaseColumns._ID} INTEGER PRIMARY KEY, " +
+            "$COLUMN_NAME_MONSTER_NAME TEXT, $COLUMN_NAME_MONSTER_SIZE TEXT, " +
+            "$COLUMN_NAME_MONSTER_TYPE TEXT, $COLUMN_NAME_MONSTER_HITS TEXT, " +
+            "$COLUMN_NAME_MONSTER_KD TEXT, $COLUMN_NAME_MONSTER_SPEED TEXT, " +
+            "$COLUMN_NAME_MONSTER_STATS TEXT, $COLUMN_NAME_MONSTER_SKILLS TEXT," +
+            " $COLUMN_NAME_MONSTER_ACTIONANDDESCRIPTION TEXT)"
+
+
+    const val CREATE_TABLE_MAGICK = "CREATE TABLE IF NOT EXISTS $TABLE_NAME_MAGICK (" +
+            "${BaseColumns._ID} INTEGER PRIMARY KEY, " +
+            "$COLUMN_NAME_MAGICK_NAME TEXT, $COLUMN_NAME_MAGICK_SPELLLVL TEXT, " +
+            "$COLUMN_NAME_MAGICK_RANGE TEXT, $COLUMN_NAME_MAGICK_SCHOOL TEXT, " +
+            "$COLUMN_NAME_MAGICK_TIME TEXT, $COLUMN_NAME_MAGICK_COMPONENT TEXT, " +
+            "$COLUMN_NAME_MAGICK_DURATION TEXT, $COLUMN_NAME_MAGICK_PERSCLASSES TEXT," +
+            " $COLUMN_NAME_MAGICK_SOORCE TEXT, $COLUMN_NAME_MAGICK_DESCRIPTION TEXT)"
+
+
+    const val SQL_DELETE_TABLE_MAGICK = "DROP TABLE IF EXISTS $TABLE_NAME_MAGICK"
+    const val SQL_DELETE_TABLE_MONSTER = "DROP TABLE IF EXISTS $TABLE_NAME_MONSTER"
+
+}
